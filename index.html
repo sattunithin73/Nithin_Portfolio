@@ -60,6 +60,62 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .btn-solid:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(200,255,0,.28);}
 .btn-ghost{background:transparent;color:var(--text);padding:14px 34px;border-radius:50px;border:1px solid var(--border2);text-decoration:none;font-weight:500;font-size:.88rem;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+/* Resume Row */
+.resume-row{
+  display:flex;align-items:center;gap:12px;
+  margin-top:16px;
+}
+.btn-resume-hero{
+  display:inline-flex;align-items:center;gap:14px;
+  background:var(--adim);
+  border:1px solid rgba(200,255,0,.25);
+  border-radius:50px;padding:10px 20px 10px 14px;
+  text-decoration:none;transition:all .2s;
+  flex:1;max-width:280px;
+}
+.btn-resume-hero:hover{
+  background:rgba(200,255,0,.12);
+  border-color:var(--accent);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(200,255,0,.15);
+}
+.resume-icon{
+  font-size:1.4rem;
+  background:rgba(200,255,0,.1);
+  border:1px solid rgba(200,255,0,.2);
+  border-radius:50%;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:1rem;
+}
+.resume-text{
+  display:flex;flex-direction:column;gap:1px;
+}
+.resume-main{
+  font-size:.88rem;font-weight:700;
+  color:var(--accent);font-family:var(--font-h);
+}
+.resume-sub{
+  font-size:.68rem;color:var(--muted);
+}
+.resume-arrow{
+  margin-left:auto;color:var(--accent);
+  font-size:1rem;font-weight:700;
+  flex-shrink:0;
+}
+.btn-resume-download{
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-radius:50px;padding:10px 20px;
+  text-decoration:none;color:var(--muted);
+  font-size:.82rem;font-weight:600;
+  transition:all .2s;white-space:nowrap;
+}
+.btn-resume-download:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  transform:translateY(-2px);
+}
 .hero-kpis{display:flex;gap:40px;margin-top:52px;animation:fadeUp .6s ease .4s both;}
 .kpi-num{font-family:var(--font-h);font-size:2.2rem;font-weight:800;color:var(--accent);line-height:1;}
 .kpi-lbl{font-size:.75rem;color:var(--muted);margin-top:4px;line-height:1.4;}
@@ -174,6 +230,32 @@ section{padding:100px 6%;}
 .proj-pt{display:flex;gap:10px;font-size:.82rem;color:var(--muted);}
 .pp-dot{color:var(--accent);flex-shrink:0;}
 .p-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.pf-links{
+  display:flex;gap:10px;
+  margin-top:16px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+}
+.pf-link-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:50px;padding:8px 18px;
+  text-decoration:none;color:var(--muted);
+  font-size:.78rem;font-weight:600;
+  transition:all .2s;
+}
+.pf-link-btn:hover{
+  border-color:var(--accent);color:var(--accent);
+  transform:translateY(-2px);
+}
+.pf-link-btn.live{
+  border-color:rgba(200,255,0,.25);
+  color:var(--accent);
+  background:var(--adim);
+}
+.pf-link-btn.live:hover{
+  background:rgba(200,255,0,.15);
+}
 .p-tag{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:.71rem;color:var(--muted);}
  
 /* Grid cards */
@@ -187,6 +269,33 @@ section{padding:100px 6%;}
 .pc-name{font-family:var(--font-h);font-size:1.05rem;font-weight:800;line-height:1.2;}
 .pc-desc{color:var(--muted);font-size:.82rem;line-height:1.65;flex:1;}
 .pc-footer{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+.pc-links{
+  display:flex;gap:8px;margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+}
+.pc-link-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:50px;padding:6px 14px;
+  text-decoration:none;color:var(--muted);
+  font-size:.75rem;font-weight:600;
+  transition:all .2s;
+}
+.pc-link-btn:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  transform:translateY(-2px);
+}
+.pc-link-btn.live{
+  border-color:rgba(200,255,0,.25);
+  color:var(--accent);
+  background:var(--adim);
+}
+.pc-link-btn.live:hover{
+  background:rgba(200,255,0,.15);
+  transform:translateY(-2px);
+}
  
 /* CERTIFICATIONS */
 #certifications{background:var(--bg2);}
@@ -269,6 +378,19 @@ footer strong{color:var(--text);}
       <a href="#projects" class="btn-solid">View Projects →</a>
       <a href="#contact" class="btn-ghost">Get In Touch</a>
     </div>
+    <div class="resume-row">
+      <a href="assets/Sattu_Nithin_Resume.pdf" target="_blank" class="btn-resume-hero">
+      <span class="resume-icon">📄</span>
+      <span class="resume-text">
+      <span class="resume-main">View My Resume</span>
+      <span class="resume-sub">PDF · Updated 2026</span>
+      </span>
+      <span class="resume-arrow">↗</span>
+      </a>
+      <a href="assets/Sattu_Nithin_Resume.pdf" download="Sattu_Nithin_Resume.pdf" class="btn-resume-download">
+       ⬇ Download
+      </a>
+    </div>
     <div class="hero-kpis">
       <div><div class="kpi-num">9+</div><div class="kpi-lbl">Projects<br>Built</div></div>
       <div class="kpi-sep"></div>
@@ -339,12 +461,13 @@ footer strong{color:var(--text);}
     </div>
     <div class="about-right">
       <p class="about-bio">I'm a <strong>Computer Science &amp; AIML graduate</strong> from Malla Reddy Engineering College, passionate about building clean, efficient full-stack web applications. I love the whole journey — from database design and backend logic to crafting responsive frontends that users enjoy.</p>
-      <p class="about-bio">During my training at <strong>JSpiders</strong> and internship at <strong>TechnoHacks Solutions</strong>, I sharpened my skills across Python, Django, MySQL, JavaScript, and Git — working on projects that solve real problems.
+      <p class="about-bio">During my training at <strong>JSpiders</strong> and internship at <strong>Bluestock Fintech</strong>, I sharpened my skills across Python, Django, MySQL, JavaScript, and Git — working on projects that solve real problems.
       <p class="about-bio">I'm actively seeking <strong>entry-level roles in Full Stack Development, Python Development, and SQL Engineering</strong> where I can contribute meaningfully and grow fast.</p>
       <div class="info-grid">
         <div class="info-tile"><div class="it-icon">📧</div><div><div class="it-lbl">Email</div><div class="it-val">nithins0073@gmail.com</div></div></div>
         <div class="info-tile"><div class="it-icon">📱</div><div><div class="it-lbl">Phone</div><div class="it-val">+91 9014053049</div></div></div>
         <div class="info-tile"><div class="it-icon">💼</div><div><div class="it-lbl">LinkedIn</div><div class="it-val">sattunithin-63b00a286</div></div></div>
+        <div class="info-tile"><div class="it-icon">🐙</div><div><div class="it-lbl">GitHub</div><div class="it-val">github.com/sattunithin73</div></div></div>
       </div>
     </div>
   </div>
@@ -495,6 +618,10 @@ footer strong{color:var(--text);}
       <div class="p-tags">
         <span class="p-tag">Python</span><span class="p-tag">Django</span><span class="p-tag">MySQL</span><span class="p-tag">OpenAI API</span><span class="p-tag">Bootstrap</span><span class="p-tag">Render</span><span class="p-tag">GitHub</span>
       </div>
+      <div class="pf-links">
+        <a href="https://github.com/sattunithin73/E-Commerce-Web-Application-using-Chatbot" target="_blank" class="pf-link-btn">⌥ GitHub</a>
+        <a href="https://e-commerce-web-application-using-chatbot.onrender.com/" target="_blank" class="pf-link-btn live">↗ Live Demo</a>
+      </div>
     </div>
   </div>
  
@@ -509,6 +636,9 @@ footer strong{color:var(--text);}
         <div class="pc-footer">
           <span class="p-tag">Python</span><span class="p-tag">Django</span><span class="p-tag">HTML5</span><span class="p-tag">CSS3</span><span class="p-tag">Git</span>
         </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/Django-Article-Project" target="_blank" class="pc-link-btn">⌥ GitHub</a>
+        </div>
       </div>
     </div>
     <div class="proj-card" data-cat="fullstack">
@@ -519,6 +649,9 @@ footer strong{color:var(--text);}
         <div class="pc-desc">A real-time weather application built with Django that fetches live weather data using the OpenWeatherMap API. Displays temperature, humidity, wind speed, and weather conditions for any city worldwide.</div>
         <div class="pc-footer">
           <span class="p-tag">Python</span><span class="p-tag">Django</span><span class="p-tag">OpenWeatherMap API</span><span class="p-tag">HTML5</span><span class="p-tag">CSS3</span>
+        </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/Open-Weather-API" target="_blank" class="pc-link-btn">⌥ GitHub</a>
         </div>
       </div>
     </div>
@@ -531,6 +664,9 @@ footer strong{color:var(--text);}
         <div class="pc-footer">
           <span class="p-tag">MySQL</span><span class="p-tag">SQL</span><span class="p-tag">DBMS</span><span class="p-tag">JOINs</span>
         </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/Company-Employee-Management-System" target="_blank" class="pc-link-btn">⌥ GitHub</a>
+        </div>
       </div>
     </div>
     <div class="proj-card" data-cat="ml">
@@ -541,6 +677,9 @@ footer strong{color:var(--text);}
         <div class="pc-desc">Decision Tree regression model achieving <strong style="color:var(--accent)">85% accuracy</strong>. Includes dataset preprocessing, feature engineering, and baseline model comparison for reliable price forecasting.</div>
         <div class="pc-footer">
           <span class="p-tag">Python</span><span class="p-tag">Pandas</span><span class="p-tag">NumPy</span><span class="p-tag">Scikit-learn</span>
+        </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/HOUSE-PRICE-PREDICTION" target="_blank" class="pc-link-btn">⌥ GitHub</a>
         </div>
       </div>
     </div>
@@ -553,6 +692,9 @@ footer strong{color:var(--text);}
         <div class="pc-footer">
           <span class="p-tag">Python</span><span class="p-tag">Pandas</span><span class="p-tag">Matplotlib</span><span class="p-tag">Data Viz</span>
         </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/Python-Sales-Data-Analysis" target="_blank" class="pc-link-btn">⌥ GitHub</a>
+        </div>
       </div>
     </div>
     <div class="proj-card" data-cat="fullstack">
@@ -563,6 +705,9 @@ footer strong{color:var(--text);}
         <div class="pc-desc">A visually rich travel landing page built with pure HTML, CSS, and JavaScript. Features destination showcases, responsive layout, smooth scroll animations, and an engaging UI to inspire travellers.</div>
         <div class="pc-footer">
           <span class="p-tag">HTML5</span><span class="p-tag">CSS3</span><span class="p-tag">JavaScript</span><span class="p-tag">Responsive</span>
+        </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/Travel-website-demo" target="_blank" class="pc-link-btn">⌥ GitHub</a>
         </div>
       </div>
     </div>
@@ -576,6 +721,9 @@ footer strong{color:var(--text);}
         <div class="pc-footer">
           <span class="p-tag">Python</span><span class="p-tag">Django</span><span class="p-tag">MySQL</span><span class="p-tag">HTML5</span><span class="p-tag">CSS3</span>
         </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/TODO-" target="_blank" class="pc-link-btn">⌥ GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -587,6 +735,10 @@ footer strong{color:var(--text);}
         <div class="pc-desc">A fully responsive personal portfolio website built with HTML, CSS, and JavaScript — the one you're viewing right now. Features smooth scroll, animated sections, skill tabs, project filters, and a dark theme with lime-green accents.</div>
         <div class="pc-footer">
           <span class="p-tag">HTML5</span><span class="p-tag">CSS3</span><span class="p-tag">JavaScript</span><span class="p-tag">Vercel</span><span class="p-tag">GitHub</span>
+        </div>
+        <div class="pc-links">
+          <a href="https://github.com/sattunithin73/Nithin_Portfolio" target="_blank" class="pc-link-btn">⌥ GitHub</a>
+          <a href="https://nithin-portfolio.vercel.app" target="_blank" class="pc-link-btn live">↗ Live</a>
         </div>
       </div>
     </div>
@@ -629,6 +781,10 @@ footer strong{color:var(--text);}
       <a href="mailto:nithins0073@gmail.com" class="c-card"><span>📧</span> nithins0073@gmail.com</a>
       <a href="tel:+919014053049" class="c-card"><span>📱</span> +91 9014053049</a>
       <a href="https://www.linkedin.com/in/sattunithin-63b00a286" target="_blank" class="c-card"><span>💼</span> LinkedIn</a>
+      <a href="https://github.com/sattunithin73" target="_blank" class="c-card"><span>🐙</span> GitHub</a>
+      <a href="https://leetcode.com/u/Sattu_Nithin73/" target="_blank" class="c-card"><span>⚡</span> LeetCode</a>
+      <a href="https://www.instagram.com/nith.iin_73/" target="_blank" class="c-card"><span>📸</span> Instagram</a>
+      <a href="https://x.com/nithinsattu123" target="_blank" class="c-card"><span>🐦</span> Twitter</a>
     </div>
   </div>
 </section>
@@ -638,7 +794,11 @@ footer strong{color:var(--text);}
   <div>© 2026 <strong>Sattu Nithin</strong>. All rights reserved.</div>
   <div class="fl">
     <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
+    <a href="#About">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#Experience">Experience</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Certs">Certs</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
